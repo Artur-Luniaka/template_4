@@ -90,7 +90,6 @@ textarea,
 select {
   font-family: inherit;
   font-size: inherit;
-  color: inherit;
   border: none;
   outline: none;
 }
@@ -742,6 +741,7 @@ p {
 
 .footer-links ul li {
   margin-bottom: var(--spacing-xs);
+  text-align: center;
 }
 
 .footer-links ul li a {
