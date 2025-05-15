@@ -1,0 +1,59 @@
+{
+  "gameDescription": {
+    "mainText": "Super Mario Wonder is a groundbreaking new entry in the Super Mario series that introduces the Wonder Flower, a mysterious item that transforms the Flower Kingdom in unexpected ways. Play as Mario, Luigi, Princess Peach, Princess Daisy, Toad, or Yoshi as you navigate through this magical world filled with surprises at every turn.",
+    "highlights": [
+      {
+        "title": "Wonder Effects",
+        "text": "The Wonder Flower transforms the world in unpredictable ways - pipes might come alive, the terrain could flip upside down, or you might even turn into a Goomba!"
+      },
+      {
+        "title": "Multiple Playable Characters",
+        "text": "Choose from a variety of characters, each with their own unique abilities and play styles to tackle the challenges of the Flower Kingdom."
+      },
+      {
+        "title": "Badge System",
+        "text": "Equip special badges to gain new abilities like the Parachute Cap or Wall-Climb Jump to customize your playstyle and overcome obstacles."
+      }
+    ]
+  },
+  "features": [
+    {
+      "title": "Wonder Flower Transformations",
+      "description": "Experience mind-bending transformations that completely change how levels play. Watch as pipes come to life, gravity shifts, or even transform into a Goomba!",
+      "image": "./images/feature-1.jpg"
+    },
+    {
+      "title": "Elephant Mario",
+      "description": "Transform into Elephant Mario with the new Elephant Fruit power-up. Use your trunk to spray water, grab items, and smash through obstacles with ease.",
+      "image": "./images/feature-2.jpg"
+    },
+    {
+      "title": "Badge System",
+      "description": "Customize your abilities with the new Badge system. Equip badges to gain special powers like wall-jumping, higher jumps, or even starting levels with power-ups.",
+      "image": "./images/feature-4.jpg"
+    },
+    {
+      "title": "Talking Flowers",
+      "description": "Meet the quirky talking flowers that inhabit the Flower Kingdom. They'll provide hints, challenges, and plenty of personality throughout your adventure.",
+      "image": "./images/feature-5.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "./images/gallery-1.jpg",
+      "alt": "Mario and friends exploring the colorful Flower Kingdom"
+    },
+    {
+      "image": "./images/gallery-2.jpg",
+      "alt": "Elephant Mario using his trunk to spray water at enemies"
+    },
+    {
+      "image": "./images/gallery-7.jpg",
+      "alt": "Character selection screen showing all playable characters"
+    },
+    {
+      "image": "./images/gallery-8.jpg",
+      "alt": "The vibrant world map of the Flower Kingdom"
+    }
+  ]
+}
