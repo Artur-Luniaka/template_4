@@ -1,20 +1,20 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --primary-color: #e60012;
-  --secondary-color: #fbd000;
-  --accent-color: #00a0e9;
-  --text-color: #333333;
-  --text-light: #666666;
-  --text-white: #ffffff;
-  --bg-color: #ffffff;
-  --bg-light: #f5f5f5;
-  --bg-dark: #222222;
-  --border-color: #dddddd;
+  --primary-color: #ff5722; /* Яркий оранжевый — акцент на кнопках и важных элементах */
+  --secondary-color: #607d8b; /* Серо-голубой — фоновые элементы и панели */
+  --accent-color: #00bcd4; /* Яркий бирюзовый — выделение активных элементов */
+  --text-color: #ffffff; /* Белый — основной цвет текста */
+  --text-light: #b0bec5; /* Светло-серый — второстепенный текст */
+  --text-white: #ffffff; /* Белый — для контрастных надписей */
+  --bg-color: #424242; /* Тёмно-серый — основной фон */
+  --bg-light: #607d8b; /* Тёмно-синий — для выделения секций */
+  --bg-dark: #000000; /* Чёрный — для глубоких теней */
+  --border-color: #ffffff; /* Серо-синий — для разделителей и рамок */
 
   /* Typography */
-  --font-main: "Arial", sans-serif;
-  --font-heading: "Arial", sans-serif;
+  --font-main: "Segoe UI", sans-serif;
+  --font-heading: "Segoe UI", sans-serif;
   --font-size-base: 16px;
   --font-size-small: 14px;
   --font-size-large: 18px;
@@ -237,6 +237,7 @@ p {
 
 .main-header .container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding-top: var(--spacing-sm);
@@ -322,6 +323,7 @@ p {
 }
 
 .hero-content {
+  text-align: center;
   max-width: 600px;
 }
 
@@ -355,7 +357,6 @@ p {
 .game-description {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 /* Features Section */
@@ -409,14 +410,14 @@ p {
 
 /* Gallery Section */
 .gallery {
-  padding: var(--spacing-xl) 0;
+  padding-bottom: 80px;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  gap: var(--spacing-md);
+  gap: 20px;
 }
 
 .gallery-item {
@@ -426,8 +427,8 @@ p {
 }
 
 .gallery-item img {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   object-fit: cover;
   transition: transform var(--transition-normal);
 }
@@ -438,7 +439,8 @@ p {
 
 /* Newsletter Section */
 .newsletter {
-  padding: var(--spacing-xl) 0;
+  padding-top: 40px;
+  padding-bottom: 80px;
   background-color: var(--secondary-color);
   text-align: center;
 }
@@ -575,8 +577,8 @@ p {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column-reverse;
   gap: var(--spacing-lg);
 }
 
@@ -715,10 +717,15 @@ p {
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+  }
 }
 
 .footer-logo a {
@@ -773,14 +780,14 @@ p {
 
 .footer-bottom {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   padding-top: var(--spacing-md);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: baseline;
     gap: 30px;
   }
