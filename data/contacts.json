@@ -1,42 +1,42 @@
 {
   "contactInfo": {
-    "address": "Parliament House, Canberra ACT 2600, Australia",
+    "address": "380 Bourke St, Melbourne VIC 3000, Australia",
     "email": "contact@domain.com",
-    "phone": "+61 3 9669 1234",
+    "phone": "+61 3 7010 1234",
     "workingHours": "Monday - Friday: 9:00 AM - 6:00 PM (AEST)"
   },
   "faqs": [
     {
-      "question": "What platforms is Super Mario Wonder available on?",
-      "answer": "Super Mario Wonder is exclusively available on Nintendo Switch and Nintendo Switch OLED models."
+      "question": "What platforms is Super Traffic Racer available on?",
+      "answer": "Super Traffic Racer is available to play directly in your browser, on both desktop and mobile devices."
     },
     {
-      "question": "Is there multiplayer in Super Mario Wonder?",
-      "answer": "Yes! Super Mario Wonder supports local multiplayer for up to 4 players. Each player can choose their favorite character with unique abilities."
+      "question": "Is there multiplayer in Super Traffic Racer?",
+      "answer": "Super Traffic Racer is a single-player game focused on high-speed driving and traffic dodging. Currently, there is no multiplayer mode."
     },
     {
-      "question": "How many worlds and levels are in Super Mario Wonder?",
-      "answer": "Super Mario Wonder features 7 unique worlds with over 90 levels in total, plus numerous secret areas and challenge rooms to discover."
+      "question": "What is the main objective of Super Traffic Racer?",
+      "answer": "The goal is to drive as far as possible without crashing, while weaving through traffic and collecting coins to unlock new vehicles."
     },
     {
-      "question": "Are there any pre-order bonuses for Super Mario Wonder?",
-      "answer": "Pre-order bonuses vary by retailer but may include exclusive in-game items, physical collectibles, or digital content. Check with your preferred retailer for details."
+      "question": "Can I unlock new cars in Super Traffic Racer?",
+      "answer": "Yes! You can collect coins during gameplay and use them to unlock various cars with different performance stats."
     },
     {
-      "question": "Will there be DLC for Super Mario Wonder?",
-      "answer": "Yes, Nintendo has announced plans for post-launch DLC content, including new worlds, characters, and power-ups. Stay tuned for more information!"
+      "question": "Are there different modes in Super Traffic Racer?",
+      "answer": "Yes, the game offers multiple modes including One-Way, Two-Way, and Time Attack, each offering a different driving challenge."
     },
     {
-      "question": "How does the Badge system work in Super Mario Wonder?",
-      "answer": "The Badge system allows players to equip one special ability at a time. Badges can be earned by completing challenges or finding them hidden throughout levels. Each badge grants a unique ability that can help you navigate levels in different ways."
+      "question": "Do I need to install anything to play Super Traffic Racer?",
+      "answer": "No installation is required. Simply visit the game page in your browser and start playing instantly."
     },
     {
-      "question": "Is there an online multiplayer mode?",
-      "answer": "Super Mario Wonder primarily focuses on local multiplayer, but it does include online leaderboards for speedruns and an asynchronous ghost mode where you can race against recordings of other players."
+      "question": "Are there any tips for high scores?",
+      "answer": "Drive as fast as you can while staying close to traffic cars to gain bonus points. Overtaking from a close distance earns more score."
     },
     {
-      "question": "What are Wonder Flowers and how do they work?",
-      "answer": "Wonder Flowers are special items that, when collected, trigger 'Wonder Effects' that dramatically transform the level in unexpected ways. Pipes might come alive, gravity could reverse, or the entire visual style might change. Each Wonder Effect creates new gameplay possibilities and challenges."
+      "question": "Does Super Traffic Racer support gamepad or keyboard controls?",
+      "answer": "On desktop, you can play using arrow keys or a compatible gamepad. On mobile, use touch controls."
     }
   ]
 }

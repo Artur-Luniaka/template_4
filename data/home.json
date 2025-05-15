@@ -1,59 +1,59 @@
 {
   "gameDescription": {
-    "mainText": "Super Mario Wonder is a groundbreaking new entry in the Super Mario series that introduces the Wonder Flower, a mysterious item that transforms the Flower Kingdom in unexpected ways. Play as Mario, Luigi, Princess Peach, Princess Daisy, Toad, or Yoshi as you navigate through this magical world filled with surprises at every turn.",
+    "mainText": "Super Traffic Racer is a high-speed endless racing game where you dodge traffic, earn coins, and unlock new cars. Drive through highways packed with vehicles and test your reflexes as you aim for the highest score.",
     "highlights": [
       {
-        "title": "Wonder Effects",
-        "text": "The Wonder Flower transforms the world in unpredictable ways - pipes might come alive, the terrain could flip upside down, or you might even turn into a Goomba!"
+        "title": "Endless Racing Challenge",
+        "text": "Race endlessly on a highway filled with cars, trucks, and buses. The longer you drive without crashing, the higher your score!"
       },
       {
-        "title": "Multiple Playable Characters",
-        "text": "Choose from a variety of characters, each with their own unique abilities and play styles to tackle the challenges of the Flower Kingdom."
+        "title": "Wide Car Selection",
+        "text": "Unlock and drive a variety of vehicles, from compact city cars to high-speed sports cars, each with unique handling."
       },
       {
-        "title": "Badge System",
-        "text": "Equip special badges to gain new abilities like the Parachute Cap or Wall-Climb Jump to customize your playstyle and overcome obstacles."
+        "title": "Upgrades and Customization",
+        "text": "Upgrade your car's speed, braking, and handling or change its look with cool paint jobs and decals."
       }
     ]
   },
   "features": [
     {
-      "title": "Wonder Flower Transformations",
-      "description": "Experience mind-bending transformations that completely change how levels play. Watch as pipes come to life, gravity shifts, or even transform into a Goomba!",
+      "title": "Realistic Traffic Simulation",
+      "description": "Navigate through dense traffic with realistic AI vehicles. Each lane is packed with unpredictable drivers.",
       "image": "./images/feature-1.jpg"
     },
     {
-      "title": "Elephant Mario",
-      "description": "Transform into Elephant Mario with the new Elephant Fruit power-up. Use your trunk to spray water, grab items, and smash through obstacles with ease.",
+      "title": "Multiple Game Modes",
+      "description": "Choose between One-Way, Two-Way, Time Attack, and Free Ride modes to test your driving skills.",
       "image": "./images/feature-2.jpg"
     },
     {
-      "title": "Badge System",
-      "description": "Customize your abilities with the new Badge system. Equip badges to gain special powers like wall-jumping, higher jumps, or even starting levels with power-ups.",
-      "image": "./images/feature-4.jpg"
+      "title": "Vehicle Upgrades",
+      "description": "Use the coins you collect to enhance your vehicle’s speed, acceleration, and control for better performance.",
+      "image": "./images/feature-3.jpg"
     },
     {
-      "title": "Talking Flowers",
-      "description": "Meet the quirky talking flowers that inhabit the Flower Kingdom. They'll provide hints, challenges, and plenty of personality throughout your adventure.",
-      "image": "./images/feature-5.jpg"
+      "title": "Day and Night Cycle",
+      "description": "Experience immersive visuals with dynamic day and night settings as you race through the highway.",
+      "image": "./images/feature-4.jpg"
     }
   ],
   "gallery": [
     {
       "image": "./images/gallery-1.jpg",
-      "alt": "Mario and friends exploring the colorful Flower Kingdom"
+      "alt": "Highway view with cars speeding through traffic"
     },
     {
       "image": "./images/gallery-2.jpg",
-      "alt": "Elephant Mario using his trunk to spray water at enemies"
+      "alt": "Player vehicle overtaking others on a busy road"
     },
     {
-      "image": "./images/gallery-7.jpg",
-      "alt": "Character selection screen showing all playable characters"
+      "image": "./images/gallery-3.jpg",
+      "alt": "Vehicle customization screen showing paint and upgrades"
     },
     {
-      "image": "./images/gallery-8.jpg",
-      "alt": "The vibrant world map of the Flower Kingdom"
+      "image": "./images/gallery-4.jpg",
+      "alt": "Night mode with glowing headlights and street lights"
     }
   ]
 }

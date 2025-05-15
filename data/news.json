@@ -2,99 +2,51 @@
   "news": [
     {
       "id": 1,
-      "title": "Super Mario Wonder Breaks Sales Records",
+      "title": "Super Traffic Racer Reaches 10 Million Plays",
       "date": "May 10, 2025",
       "category": "Updates",
       "image": "./images/gallery-1.jpg",
-      "summary": "Super Mario Wonder has become the fastest-selling Mario game of all time, with over 10 million copies sold in its first week of release."
+      "summary": "Super Traffic Racer has become one of the most played online racing games this year, with over 10 million sessions recorded globally."
     },
     {
       "id": 2,
-      "title": "New DLC Announced: Bowser's Revenge",
+      "title": "New Cars and Skins Added in Latest Update",
       "date": "May 5, 2025",
       "category": "Updates",
       "image": "./images/gallery-2.jpg",
-      "summary": "Nintendo has announced the first DLC for Super Mario Wonder, titled 'Bowser's Revenge', featuring new levels, power-ups, and challenges."
+      "summary": "A new update brings 5 high-performance vehicles and fresh customization options, including neon skins and futuristic decals."
     },
     {
       "id": 3,
-      "title": "Super Mario Wonder Championship Announced",
+      "title": "Online Time Trial Event Announced",
       "date": "April 28, 2025",
       "category": "Events",
       "image": "./images/gallery-3.jpg",
-      "summary": "Nintendo is hosting the first-ever Super Mario Wonder Championship, with qualifiers starting next month. Winners will compete in the finals in Tokyo."
+      "summary": "Compete against players worldwide in the new Time Trial Challenge. Top scorers will be featured on the global leaderboard."
     },
     {
       "id": 4,
-      "title": "Fan Creates Amazing Super Mario Wonder Artwork",
+      "title": "Player Designs Stunning Custom Highway Map",
       "date": "April 20, 2025",
       "category": "Community",
       "image": "./images/gallery-4.jpg",
-      "summary": "Check out this incredible fan art showcasing all the characters and transformations from Super Mario Wonder in a stunning panoramic piece."
+      "summary": "A passionate player shared a fan-made highway map concept with dynamic weather and branching routes. The community is loving it!"
     },
     {
       "id": 5,
-      "title": "Speedrunner Completes Super Mario Wonder in Under 2 Hours",
+      "title": "World Record Set: 50 Minutes Without Crashing",
       "date": "April 15, 2025",
       "category": "Community",
       "image": "./images/gallery-5.jpg",
-      "summary": "Professional speedrunner MarioMaster64 has set a new world record by completing Super Mario Wonder in just 1 hour and 58 minutes."
+      "summary": "Speedrunner FastLanePro set a new world record by surviving traffic mayhem for 50 straight minutes in Hardcore Mode."
     },
     {
       "id": 6,
-      "title": "Super Mario Wonder Soundtrack Now Available",
+      "title": "Official Super Traffic Racer Soundtrack Released",
       "date": "April 10, 2025",
       "category": "Updates",
       "image": "./images/gallery-6.jpg",
-      "summary": "The complete Super Mario Wonder soundtrack is now available on all major streaming platforms, featuring 78 tracks of magical Mario music."
-    },
-    {
-      "id": 7,
-      "title": "Nintendo Announces Super Mario Wonder Tour",
-      "date": "April 5, 2025",
-      "category": "Events",
-      "image": "./images/gallery-7.jpg",
-      "summary": "Nintendo is taking Super Mario Wonder on tour with interactive exhibits, playable demos, and exclusive merchandise in major cities worldwide."
-    },
-    {
-      "id": 8,
-      "title": "Hidden Easter Eggs Discovered in Super Mario Wonder",
-      "date": "March 30, 2025",
-      "category": "Community",
-      "image": "./images/gallery-8.jpg",
-      "summary": "Players have discovered dozens of hidden Easter eggs and references to classic Mario games throughout Super Mario Wonder."
-    },
-    {
-      "id": 9,
-      "title": "Super Mario Wonder Patch 1.2.0 Released",
-      "date": "March 25, 2025",
-      "category": "Updates",
-      "image": "./images/feature-3.jpg",
-      "summary": "The latest patch for Super Mario Wonder adds new challenge levels, fixes bugs, and improves online multiplayer performance."
-    },
-    {
-      "id": 10,
-      "title": "Super Mario Wonder Merchandise Collection Unveiled",
-      "date": "March 20, 2025",
-      "category": "Updates",
-      "image": "./images/feature-1.jpg",
-      "summary": "Nintendo has unveiled a new collection of Super Mario Wonder merchandise, including plushies, clothing, and collectibles featuring the game's characters."
-    },
-    {
-      "id": 11,
-      "title": "Fan Creates Functional Wonder Flower Prop",
-      "date": "March 15, 2025",
-      "category": "Community",
-      "image": "./images/feature-2.jpg",
-      "summary": "A talented fan has created a functional Wonder Flower prop that lights up and plays music from the game when activated."
-    },
-    {
-      "id": 12,
-      "title": "Super Mario Wonder Developer Interview",
-      "date": "March 10, 2025",
-      "category": "Updates",
-      "image": "./images/feature-4.jpg",
-      "summary": "In an exclusive interview, the developers of Super Mario Wonder discuss the creative process behind the game's innovative features."
+      "summary": "The dynamic soundtrack of Super Traffic Racer is now available on major music platforms, featuring pulse-pounding synthwave tracks."
     }
   ]
 }
