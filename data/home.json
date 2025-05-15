@@ -20,39 +20,39 @@
     {
       "title": "Realistic Traffic Simulation",
       "description": "Navigate through dense traffic with realistic AI vehicles. Each lane is packed with unpredictable drivers.",
-      "image": "./images/feature-1.jpg"
+      "image": "./images/feature-1.png"
     },
     {
       "title": "Multiple Game Modes",
       "description": "Choose between One-Way, Two-Way, Time Attack, and Free Ride modes to test your driving skills.",
-      "image": "./images/feature-2.jpg"
+      "image": "./images/feature-2.png"
     },
     {
       "title": "Vehicle Upgrades",
       "description": "Use the coins you collect to enhance your vehicle’s speed, acceleration, and control for better performance.",
-      "image": "./images/feature-3.jpg"
+      "image": "./images/feature-3.png"
     },
     {
       "title": "Day and Night Cycle",
       "description": "Experience immersive visuals with dynamic day and night settings as you race through the highway.",
-      "image": "./images/feature-4.jpg"
+      "image": "./images/feature-4.png"
     }
   ],
   "gallery": [
     {
-      "image": "./images/gallery-1.jpg",
+      "image": "./images/gallery-1.png",
       "alt": "Highway view with cars speeding through traffic"
     },
     {
-      "image": "./images/gallery-2.jpg",
+      "image": "./images/gallery-2.png",
       "alt": "Player vehicle overtaking others on a busy road"
     },
     {
-      "image": "./images/gallery-3.jpg",
+      "image": "./images/gallery-3.png",
       "alt": "Vehicle customization screen showing paint and upgrades"
     },
     {
-      "image": "./images/gallery-4.jpg",
+      "image": "./images/gallery-4.png",
       "alt": "Night mode with glowing headlights and street lights"
     }
   ]
