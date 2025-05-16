@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Show modal (only on home page)
   if (
     window.location.pathname === "/" ||
-    window.location.pathname.includes("index.html")
+    window.location.pathname.includes("./")
   ) {
     showModal();
   }
