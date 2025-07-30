@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Updates - Jet Escape</title>
+    <link rel="stylesheet" href="css/thrust-engine.css" />
+    <link rel="stylesheet" href="css/escape-dynamics.css" />
+  </head>
+  <body class="mission-control">
+    <div id="cockpit-header-container"></div>
+
+    <main class="flight-deck">
+      <section class="mission-briefing">
+        <div class="mission-container">
+          <h1 class="page-title">Mission Updates</h1>
+          <p class="briefing-subtitle">
+            Latest developments from the flight deck
+          </p>
+        </div>
+      </section>
+
+      <!-- System Logs -->
+      <section class="system-terminal" id="systemLogs">
+        <div class="mission-container">
+          <h2 class="section-title">System Logs</h2>
+          <div class="logs-grid" id="logsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Pilot Diaries -->
+      <section class="pilot-logbook" id="pilotDiaries">
+        <div class="mission-container">
+          <h2 class="section-title">Pilot Diaries</h2>
+          <div class="diaries-grid" id="diariesGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="hangar-footer-container"></div>
+
+    <script src="js/thrust-core.js"></script>
+    <script src="js/escape-loader.js"></script>
+    <script src="js/mission-updates.js"></script>
+  </body>
+</html>

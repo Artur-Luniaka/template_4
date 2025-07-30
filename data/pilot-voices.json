@@ -1,0 +1,38 @@
+[
+  {
+    "pilotName": "Captain Maverick",
+    "comment": "The most intense aerial combat experience I've ever had. The escape missions are absolutely thrilling and the controls are incredibly responsive. This is what jet combat should feel like!",
+    "rank": "Ace Pilot",
+    "missionsCompleted": 150
+  },
+  {
+    "pilotName": "Lieutenant Phoenix",
+    "comment": "Incredible graphics and smooth controls. The jet physics feel incredibly realistic and the upgrade system adds so much depth to the gameplay. Every mission feels unique!",
+    "rank": "Combat Pilot",
+    "missionsCompleted": 89
+  },
+  {
+    "pilotName": "Commander Thunder",
+    "comment": "The upgrade system adds so much depth. Every mission feels unique and challenging. The AI opponents are smart and the weather system really adds to the immersion.",
+    "rank": "Squadron Leader",
+    "missionsCompleted": 234
+  },
+  {
+    "pilotName": "Major Storm",
+    "comment": "Finally, a flight game that gets the controls right! The afterburner mechanics and weapon systems feel authentic. The escape missions are perfectly balanced.",
+    "rank": "Flight Instructor",
+    "missionsCompleted": 312
+  },
+  {
+    "pilotName": "Colonel Eagle",
+    "comment": "The dynamic weather system is a game-changer. Flying through storms and adapting to changing conditions makes every mission feel fresh and challenging.",
+    "rank": "Veteran Pilot",
+    "missionsCompleted": 178
+  },
+  {
+    "pilotName": "Captain Lightning",
+    "comment": "The graphics are stunning and the performance is smooth even on older systems. The mission variety keeps me coming back for more. Highly recommended!",
+    "rank": "Test Pilot",
+    "missionsCompleted": 95
+  }
+]

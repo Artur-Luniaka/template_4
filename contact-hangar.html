@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Hangar - Jet Escape</title>
+    <link rel="stylesheet" href="css/thrust-engine.css" />
+    <link rel="stylesheet" href="css/escape-dynamics.css" />
+  </head>
+  <body class="mission-control">
+    <div id="cockpit-header-container"></div>
+
+    <main class="flight-deck">
+      <section class="mission-briefing">
+        <div class="mission-container">
+          <h1 class="page-title">Contact Hangar</h1>
+          <p class="briefing-subtitle">Get in touch with mission control</p>
+        </div>
+      </section>
+
+      <section class="communication-hub">
+        <div class="mission-container">
+          <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info" id="contactInfo">
+              <h2 class="section-title">Mission Control</h2>
+              <div class="info-items" id="infoItems"></div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="transmission-form">
+              <h2 class="section-title">Send Transmission</h2>
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <label for="pilotName" class="form-label">Pilot Name</label>
+                  <input
+                    type="text"
+                    id="pilotName"
+                    name="pilotName"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="pilotEmail" class="form-label"
+                    >Email Frequency</label
+                  >
+                  <input
+                    type="email"
+                    id="pilotEmail"
+                    name="pilotEmail"
+                    class="form-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="missionMessage" class="form-label"
+                    >Mission Report</label
+                  >
+                  <textarea
+                    id="missionMessage"
+                    name="missionMessage"
+                    class="form-textarea"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="transmit-button">
+                  Send Transmission
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div class="navigation-map">
+            <h2 class="section-title">Base Location</h2>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.5!2d-0.1276!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTEsNTAuNzQ!5e0!3m2!1sen!2suk!4v1234567890"
+                width="100%"
+                height="400"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="hangar-footer-container"></div>
+
+    <script src="js/thrust-core.js"></script>
+    <script src="js/escape-loader.js"></script>
+    <script src="js/contact-hangar.js"></script>
+  </body>
+</html>

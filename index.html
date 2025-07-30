@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jet Escape - Ultimate Air Combat Escape</title>
+    <link rel="stylesheet" href="css/thrust-engine.css" />
+    <link rel="stylesheet" href="css/escape-dynamics.css" />
+  </head>
+  <body class="mission-control">
+    <div id="cockpit-header-container"></div>
+
+    <main class="flight-deck">
+      <!-- Hero Section -->
+      <section class="afterburner-zone">
+        <div class="thrust-container">
+          <h1 class="mission-title">Jet Escape</h1>
+          <p class="escape-slogan">
+            Break free from the impossible. Soar beyond limits.
+          </p>
+          <button class="ignite-button" id="playButton">Launch Mission</button>
+          <div class="jet-visual">
+            <div class="fighter-silhouette"></div>
+            <div class="thrust-trail"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Jet Features -->
+      <section class="cockpit-area" id="jetFeatures">
+        <div class="mission-container">
+          <h2 class="section-title">Combat Features</h2>
+          <div class="features-grid" id="featuresGrid"></div>
+        </div>
+      </section>
+
+      <!-- How to Escape -->
+      <section class="escape-hud" id="howToEscape">
+        <div class="mission-container">
+          <h2 class="section-title">Mission Briefing</h2>
+          <div class="briefing-content" id="briefingContent"></div>
+        </div>
+      </section>
+
+      <!-- Pilot Voices -->
+      <section class="radio-frequency" id="pilotVoices">
+        <div class="mission-container">
+          <h2 class="section-title">Pilot Communications</h2>
+          <div class="voices-grid" id="voicesGrid"></div>
+        </div>
+      </section>
+
+      <!-- Sky Zones -->
+      <section class="airspace-sector" id="skyZones">
+        <div class="mission-container">
+          <h2 class="section-title">Combat Zones</h2>
+          <div class="zones-grid" id="zonesGrid"></div>
+        </div>
+      </section>
+
+      <!-- Upgrades Hangar -->
+      <section class="maintenance-bay" id="upgradesHangar">
+        <div class="mission-container">
+          <h2 class="section-title">Hangar Upgrades</h2>
+          <div class="upgrades-grid" id="upgradesGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="hangar-footer-container"></div>
+
+    <script src="js/thrust-core.js"></script>
+    <script src="js/escape-loader.js"></script>
+    <script src="js/mission-control.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Metropolitan Skies",
+    "description": "Navigate through dense urban environments with skyscrapers and complex air traffic patterns. Use buildings for cover and navigate tight spaces while avoiding civilian aircraft.",
+    "difficulty": "Medium",
+    "altitude": "500-2000m"
+  },
+  {
+    "name": "Canyon Corridors",
+    "description": "High-speed low-altitude flying through narrow canyon passages with tight turns and obstacles. Master precision flying as you navigate through challenging terrain.",
+    "difficulty": "Hard",
+    "altitude": "100-500m"
+  },
+  {
+    "name": "Arctic Storm",
+    "description": "Extreme weather conditions with limited visibility and challenging ice formations. Battle against both enemy aircraft and the harsh environment.",
+    "difficulty": "Expert",
+    "altitude": "1000-5000m"
+  },
+  {
+    "name": "Desert Heat",
+    "description": "Scorching temperatures and sandstorms create unique challenges. Thermal effects impact engine performance and visibility is constantly changing.",
+    "difficulty": "Hard",
+    "altitude": "200-1500m"
+  },
+  {
+    "name": "Mountain Peaks",
+    "description": "High-altitude combat above snow-capped peaks. Thin air affects engine performance and requires careful fuel management.",
+    "difficulty": "Expert",
+    "altitude": "3000-8000m"
+  },
+  {
+    "name": "Coastal Waters",
+    "description": "Maritime operations with carrier-based missions and naval threats. Salt air and changing weather patterns add complexity to operations.",
+    "difficulty": "Medium",
+    "altitude": "100-3000m"
+  }
+]

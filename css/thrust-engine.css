@@ -1,0 +1,314 @@
+/* Jet Escape - Aviation Themed CSS Variables */
+:root {
+  /* Sky and Atmosphere Colors */
+  --sky-thrust: #0a0e1a;
+  --turbo-flame: #1a2332;
+  --mission-mood: #2d3748;
+  --cloud-cover: #4a5568;
+  --jet-stream: #718096;
+  --altitude-light: #a0aec0;
+  --sky-glow: #e2e8f0;
+  --pure-sky: #ffffff;
+
+  /* Combat and Energy Colors */
+  --afterburner-orange: #ff6b35;
+  --thrust-blue: #3182ce;
+  --radar-green: #38a169;
+  --warning-red: #e53e3e;
+  --stealth-gray: #2d3748;
+  --golden-wing: #d69e2e;
+
+  /* Typography */
+  --font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-mono: "Courier New", "Lucida Console", Monaco, monospace;
+
+  /* Spacing and Layout */
+  --mission-padding: 1rem;
+  --flight-margin: 2rem;
+  --hangar-gap: 1.5rem;
+  --cockpit-radius: 8px;
+  --thrust-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --afterburner-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --thrust-transition: all 0.3s ease;
+  --escape-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Breakpoints */
+  --mobile-threshold: 360px;
+  --tablet-threshold: 768px;
+  --desktop-threshold: 1280px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  background: linear-gradient(
+    135deg,
+    var(--sky-thrust) 0%,
+    var(--turbo-flame) 100%
+  );
+  color: var(--sky-glow);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Mission Container */
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--mission-padding);
+}
+
+/* Typography */
+.mission-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(
+    45deg,
+    var(--afterburner-orange),
+    var(--thrust-blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--pure-sky);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--sky-glow);
+  margin-bottom: var(--flight-margin);
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--afterburner-orange),
+    var(--thrust-blue)
+  );
+  border-radius: 2px;
+}
+
+.escape-slogan {
+  font-size: 1.25rem;
+  color: var(--altitude-light);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.briefing-subtitle {
+  font-size: 1.1rem;
+  color: var(--jet-stream);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.ignite-button {
+  background: linear-gradient(
+    45deg,
+    var(--afterburner-orange),
+    var(--thrust-blue)
+  );
+  color: var(--pure-sky);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--cockpit-radius);
+  cursor: pointer;
+  transition: var(--thrust-transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: var(--thrust-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.ignite-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: var(--escape-transition);
+}
+
+.ignite-button:hover::before {
+  left: 100%;
+}
+
+.ignite-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--afterburner-shadow);
+}
+
+.transmit-button {
+  background: linear-gradient(45deg, var(--radar-green), var(--thrust-blue));
+  color: var(--pure-sky);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--cockpit-radius);
+  cursor: pointer;
+  transition: var(--thrust-transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transmit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--thrust-shadow);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--sky-glow);
+  font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--cloud-cover);
+  border-radius: var(--cockpit-radius);
+  background: var(--mission-mood);
+  color: var(--sky-glow);
+  font-family: var(--font-family-primary);
+  transition: var(--thrust-transition);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--thrust-blue);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Links */
+a {
+  color: var(--thrust-blue);
+  text-decoration: none;
+  transition: var(--thrust-transition);
+}
+
+a:hover {
+  color: var(--afterburner-orange);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 1.5rem;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-title {
+    font-size: 2.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .escape-slogan {
+    font-size: 1.1rem;
+  }
+
+  .mission-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+  }
+}

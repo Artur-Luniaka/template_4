@@ -1,0 +1,45 @@
+{
+  "features": [
+    {
+      "title": "High-Speed Combat",
+      "description": "Experience intense dogfights at supersonic speeds with realistic physics and dynamic weather conditions. Master the art of aerial combat with precision controls and advanced weapon systems.",
+      "type": "Combat",
+      "rating": 5
+    },
+    {
+      "title": "Advanced Jet Controls",
+      "description": "Master the art of aerial combat with intuitive controls and realistic flight mechanics. Feel the power of afterburners and experience true jet fighter performance.",
+      "type": "Gameplay",
+      "rating": 5
+    },
+    {
+      "title": "Epic Escape Missions",
+      "description": "Navigate through increasingly challenging scenarios as you fight to escape enemy territory. Each mission offers unique challenges and requires strategic thinking.",
+      "type": "Mission",
+      "rating": 5
+    },
+    {
+      "title": "Dynamic Weather System",
+      "description": "Face realistic weather conditions that affect flight dynamics and visibility. From clear skies to stormy conditions, adapt your strategy to survive.",
+      "type": "Environment",
+      "rating": 4
+    },
+    {
+      "title": "Advanced AI Opponents",
+      "description": "Battle against intelligent AI pilots with realistic behavior patterns. Each enemy has unique tactics and skill levels that increase with difficulty.",
+      "type": "AI",
+      "rating": 4
+    },
+    {
+      "title": "Upgrade System",
+      "description": "Enhance your jet with advanced weapons, improved engines, and stealth technology. Unlock new capabilities as you progress through missions.",
+      "type": "Progression",
+      "rating": 5
+    }
+  ],
+  "briefing": {
+    "objectives": "Your mission is to escape enemy airspace while avoiding detection and engaging hostile aircraft when necessary. Navigate through hostile territory, complete objectives, and return to friendly airspace safely.",
+    "controls": "Use WASD for movement, Space for afterburner, Mouse for targeting, Shift for special maneuvers, and Ctrl for weapon selection. Master these controls to become an elite pilot.",
+    "strategy": "Stay low to avoid radar detection, use terrain for cover, and conserve fuel for critical escape moments. Plan your route carefully and always have an escape plan ready."
+  }
+}

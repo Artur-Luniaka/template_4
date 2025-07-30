@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Advanced Radar System",
+    "description": "Enhanced detection range and improved target tracking capabilities. Provides better situational awareness and early warning of enemy threats.",
+    "cost": "5000 Credits",
+    "type": "Electronics"
+  },
+  {
+    "name": "Stealth Coating",
+    "description": "Reduces radar signature and improves evasion capabilities. Makes your aircraft harder to detect by enemy radar systems.",
+    "cost": "8000 Credits",
+    "type": "Defense"
+  },
+  {
+    "name": "Enhanced Thrusters",
+    "description": "Increased speed and maneuverability for better escape potential. Improves acceleration and maximum speed capabilities.",
+    "cost": "12000 Credits",
+    "type": "Performance"
+  },
+  {
+    "name": "Advanced Missile System",
+    "description": "Upgraded weapon systems with improved accuracy and range. Enhanced targeting and firepower for better combat effectiveness.",
+    "cost": "15000 Credits",
+    "type": "Weapons"
+  },
+  {
+    "name": "Reinforced Armor",
+    "description": "Improved structural integrity and damage resistance. Better protection against enemy fire and environmental hazards.",
+    "cost": "10000 Credits",
+    "type": "Defense"
+  },
+  {
+    "name": "Advanced Avionics",
+    "description": "State-of-the-art flight control systems and navigation equipment. Improved handling and mission planning capabilities.",
+    "cost": "18000 Credits",
+    "type": "Electronics"
+  },
+  {
+    "name": "Fuel Efficiency Upgrade",
+    "description": "Optimized engine systems for extended range and endurance. Allows for longer missions and better fuel management.",
+    "cost": "9000 Credits",
+    "type": "Performance"
+  },
+  {
+    "name": "Electronic Countermeasures",
+    "description": "Advanced jamming and deception systems. Provides protection against enemy missile systems and radar tracking.",
+    "cost": "14000 Credits",
+    "type": "Defense"
+  }
+]
