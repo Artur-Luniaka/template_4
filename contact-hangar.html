@@ -35,7 +35,7 @@
             <!-- Contact Form -->
             <div class="transmission-form">
               <h2 class="section-title">Send Transmission</h2>
-              <form class="contact-form" id="contactForm">
+              <form class="contact-form" id="contactForm" autocomplete="on">
                 <div class="form-group">
                   <label for="pilotName" class="form-label">Pilot Name</label>
                   <input
@@ -44,6 +44,7 @@
                     name="pilotName"
                     class="form-input"
                     required
+                    autocomplete="on"
                   />
                 </div>
                 <div class="form-group">
@@ -56,6 +57,7 @@
                     name="pilotPhone"
                     class="form-input"
                     required
+                    autocomplete="on"
                   />
                 </div>
                 <div class="form-group">
@@ -68,6 +70,7 @@
                     class="form-textarea"
                     rows="5"
                     required
+                    autocomplete="on"
                   ></textarea>
                 </div>
                 <button type="submit" class="transmit-button">

@@ -540,10 +540,6 @@ function addContactStatistics() {
   statsContainer.className = "contact-stats";
   statsContainer.innerHTML = `
         <div class="stat-item">
-            <span class="stat-number" id="totalTransmissions">0</span>
-            <span class="stat-label">Total Transmissions</span>
-        </div>
-        <div class="stat-item">
             <span class="stat-number" id="responseTime">24h</span>
             <span class="stat-label">Avg Response Time</span>
         </div>
