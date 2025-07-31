@@ -22,17 +22,5 @@
     "comment": "Finally, a flight game that gets the controls right! The afterburner mechanics and weapon systems feel authentic. The escape missions are perfectly balanced.",
     "rank": "Flight Instructor",
     "missionsCompleted": 312
-  },
-  {
-    "pilotName": "Colonel Eagle",
-    "comment": "The dynamic weather system is a game-changer. Flying through storms and adapting to changing conditions makes every mission feel fresh and challenging.",
-    "rank": "Veteran Pilot",
-    "missionsCompleted": 178
-  },
-  {
-    "pilotName": "Captain Lightning",
-    "comment": "The graphics are stunning and the performance is smooth even on older systems. The mission variety keeps me coming back for more. Highly recommended!",
-    "rank": "Test Pilot",
-    "missionsCompleted": 95
   }
 ]

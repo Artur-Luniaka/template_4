@@ -38,8 +38,8 @@
     }
   ],
   "briefing": {
-    "objectives": "Your mission is to escape enemy airspace while avoiding detection and engaging hostile aircraft when necessary. Navigate through hostile territory, complete objectives, and return to friendly airspace safely.",
-    "controls": "Use WASD for movement, Space for afterburner, Mouse for targeting, Shift for special maneuvers, and Ctrl for weapon selection. Master these controls to become an elite pilot.",
-    "strategy": "Stay low to avoid radar detection, use terrain for cover, and conserve fuel for critical escape moments. Plan your route carefully and always have an escape plan ready."
+    "objectives": "Your primary mission is to infiltrate enemy airspace, gather critical intelligence, and execute a high-speed escape while evading hostile aircraft. Navigate through heavily defended territory, complete reconnaissance objectives, and return to friendly airspace with vital information. Success requires precision, timing, and nerves of steel.",
+    "controls": "Master the advanced flight controls: WASD for precise movement, Space for afterburner boost, Mouse for target acquisition, Shift for evasive maneuvers, Ctrl for weapon selection, and Q/E for roll control. Advanced pilots can use Alt for terrain following and Tab for tactical map overlay.",
+    "strategy": "Maintain low altitude to minimize radar detection, utilize terrain features for cover, and conserve fuel for critical escape moments. Plan multiple escape routes, monitor enemy patrol patterns, and always maintain situational awareness. Remember: speed is your ally, but stealth is your survival."
   }
 }

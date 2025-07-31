@@ -22,29 +22,5 @@
     "content": "Upgraded visual effects and improved texture quality. New particle systems and lighting effects create more immersive environments.",
     "date": "2024-11-28",
     "version": "2.0.0"
-  },
-  {
-    "title": "Audio Improvements",
-    "content": "Enhanced sound effects and improved audio mixing. New engine sounds and environmental audio create more realistic flight experience.",
-    "date": "2024-11-20",
-    "version": "1.9.8"
-  },
-  {
-    "title": "Control Refinements",
-    "content": "Fine-tuned flight controls and improved responsiveness. Better input handling and customizable control schemes for all players.",
-    "date": "2024-11-15",
-    "version": "1.9.5"
-  },
-  {
-    "title": "New Aircraft",
-    "content": "Added three new fighter jets with unique characteristics and capabilities. Each aircraft offers different playstyles and upgrade paths.",
-    "date": "2024-11-10",
-    "version": "1.9.0"
-  },
-  {
-    "title": "Multiplayer Enhancements",
-    "content": "Improved matchmaking system and added new multiplayer modes. Enhanced network stability and reduced latency for better online experience.",
-    "date": "2024-11-05",
-    "version": "1.8.8"
   }
 ]

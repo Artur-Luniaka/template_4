@@ -42,7 +42,7 @@ function processTransmission(form) {
   const formData = new FormData(form);
   const transmissionData = {
     pilotName: formData.get("pilotName"),
-    pilotEmail: formData.get("pilotEmail"),
+    pilotPhone: formData.get("pilotPhone"),
     missionMessage: formData.get("missionMessage"),
     timestamp: new Date().toISOString(),
     transmissionId: generateTransmissionId(),
@@ -56,86 +56,57 @@ function processTransmission(form) {
     return;
   }
 
-  // Add to transmission queue
-  transmissionQueue.push(transmissionData);
+  // Show processing overlay
+  showProcessingOverlay();
 
-  // Show success message
-  showTransmissionSuccess(transmissionData);
+  // Simulate processing delay
+  setTimeout(() => {
+    // Hide processing overlay
+    hideProcessingOverlay();
 
-  // Clear form
-  form.reset();
+    // Add to transmission queue
+    transmissionQueue.push(transmissionData);
 
-  // Store in localStorage
-  storeTransmission(transmissionData);
+    // Show success modal
+    showSuccessModal(transmissionData);
+
+    // Clear form
+    form.reset();
+
+    // Store in localStorage
+    storeTransmission(transmissionData);
+
+    // Scroll to top
+    scrollToTop();
+  }, 2000); // 2 seconds processing time
 }
 
-// Validate transmission
+// Validate transmission - simple validation for field completion only
 function validateTransmission(data) {
   const errors = [];
 
   if (!data.pilotName.trim()) {
-    errors.push("Pilot name is required");
-  } else if (data.pilotName.length < 2) {
-    errors.push("Pilot name must be at least 2 characters");
+    errors.push("Pilot name field is required");
   }
 
-  if (!data.pilotEmail.trim()) {
-    errors.push("Email frequency is required");
-  } else if (!isValidEmail(data.pilotEmail)) {
-    errors.push("Invalid email frequency format");
+  if (!data.pilotPhone.trim()) {
+    errors.push("Phone field is required");
   }
 
   if (!data.missionMessage.trim()) {
-    errors.push("Mission report is required");
-  } else if (data.missionMessage.length < 10) {
-    errors.push("Mission report must be at least 10 characters");
+    errors.push("Message field is required");
   }
 
   return errors;
 }
 
-// Validate individual field
+// Validate individual field - simple validation for field completion only
 function validateField(field) {
-  const fieldName = field.name;
   const fieldValue = field.value.trim();
-
-  let isValid = true;
-  let errorMessage = "";
-
-  switch (fieldName) {
-    case "pilotName":
-      if (!fieldValue) {
-        isValid = false;
-        errorMessage = "Pilot name is required";
-      } else if (fieldValue.length < 2) {
-        isValid = false;
-        errorMessage = "Pilot name must be at least 2 characters";
-      }
-      break;
-
-    case "pilotEmail":
-      if (!fieldValue) {
-        isValid = false;
-        errorMessage = "Email frequency is required";
-      } else if (!isValidEmail(fieldValue)) {
-        isValid = false;
-        errorMessage = "Invalid email frequency format";
-      }
-      break;
-
-    case "missionMessage":
-      if (!fieldValue) {
-        isValid = false;
-        errorMessage = "Mission report is required";
-      } else if (fieldValue.length < 10) {
-        isValid = false;
-        errorMessage = "Mission report must be at least 10 characters";
-      }
-      break;
-  }
+  const isValid = fieldValue.length > 0;
 
   if (!isValid) {
-    showFieldError(field, errorMessage);
+    showFieldError(field, "This field is required");
   } else {
     clearFieldError(field);
   }
@@ -179,24 +150,236 @@ function displayValidationErrors(errors) {
   }
 }
 
-// Show transmission success
-function showTransmissionSuccess(data) {
-  if (window.JetEscape) {
-    window.JetEscape.showMissionNotification(
-      "Transmission sent successfully!",
-      "success"
-    );
+// Show processing overlay with 3 dots animation
+function showProcessingOverlay() {
+  const overlay = document.createElement("div");
+  overlay.id = "processingOverlay";
+  overlay.innerHTML = `
+    <div class="processing-container">
+      <div class="processing-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <p class="processing-text">Processing transmission...</p>
+    </div>
+  `;
+
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+  `;
+
+  document.body.appendChild(overlay);
+
+  // Add CSS for processing animation
+  const processingStyles = document.createElement("style");
+  processingStyles.textContent = `
+    .processing-container {
+      text-align: center;
+      color: white;
+    }
+    
+    .processing-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: var(--radar-green);
+      border-radius: 50%;
+      animation: processingPulse 1.4s ease-in-out infinite both;
+    }
+    
+    .dot:nth-child(1) { animation-delay: -0.32s; }
+    .dot:nth-child(2) { animation-delay: -0.16s; }
+    .dot:nth-child(3) { animation-delay: 0s; }
+    
+    @keyframes processingPulse {
+      0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    .processing-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 0;
+      color: var(--radar-green);
+    }
+  `;
+  document.head.appendChild(processingStyles);
+}
+
+// Hide processing overlay
+function hideProcessingOverlay() {
+  const overlay = document.getElementById("processingOverlay");
+  if (overlay) {
+    overlay.style.opacity = "0";
+    overlay.style.transition = "opacity 0.3s ease";
+    setTimeout(() => {
+      overlay.remove();
+    }, 300);
   }
+}
 
-  // Add success animation to form
-  const form = document.getElementById("contactForm");
-  form.style.transform = "scale(1.02)";
-  form.style.boxShadow = "0 0 30px rgba(56, 161, 105, 0.3)";
+// Show success modal
+function showSuccessModal(data) {
+  const modal = document.createElement("div");
+  modal.id = "successModal";
+  modal.innerHTML = `
+    <div class="success-modal-content">
+      <div class="success-icon">✓</div>
+      <h3>Transmission Successful!</h3>
+      <p>Your message has been sent to mission control.</p>
+      <p class="transmission-id">ID: ${data.transmissionId}</p>
+      <button class="close-modal-btn">Continue</button>
+    </div>
+  `;
 
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  `;
+
+  document.body.appendChild(modal);
+
+  // Add CSS for success modal
+  const modalStyles = document.createElement("style");
+  modalStyles.textContent = `
+    .success-modal-content {
+      background: var(--mission-mood);
+      border: 2px solid var(--radar-green);
+      border-radius: var(--cockpit-radius);
+      padding: 2rem;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+    
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--radar-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      margin: 0 auto 1rem;
+      animation: successPulse 0.6s ease;
+    }
+    
+    @keyframes successPulse {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    
+    .success-modal-content h3 {
+      color: var(--radar-green);
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .success-modal-content p {
+      color: var(--jet-stream);
+      margin: 0 0 0.5rem;
+    }
+    
+    .transmission-id {
+      font-family: var(--font-family-mono);
+      font-size: 0.9rem;
+      color: var(--altitude-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    .close-modal-btn {
+      background: var(--radar-green);
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: var(--cockpit-radius);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .close-modal-btn:hover {
+      background: var(--thrust-blue);
+      transform: translateY(-2px);
+    }
+  `;
+  document.head.appendChild(modalStyles);
+
+  // Show modal with animation
   setTimeout(() => {
-    form.style.transform = "scale(1)";
-    form.style.boxShadow = "none";
-  }, 1000);
+    modal.style.opacity = "1";
+    modal.querySelector(".success-modal-content").style.transform = "scale(1)";
+  }, 100);
+
+  // Close modal on button click
+  modal.querySelector(".close-modal-btn").addEventListener("click", () => {
+    modal.style.opacity = "0";
+    modal.querySelector(".success-modal-content").style.transform =
+      "scale(0.8)";
+    setTimeout(() => {
+      modal.remove();
+    }, 300);
+  });
+
+  // Close modal on background click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.opacity = "0";
+      modal.querySelector(".success-modal-content").style.transform =
+        "scale(0.8)";
+      setTimeout(() => {
+        modal.remove();
+      }, 300);
+    }
+  });
+}
+
+// Scroll to top of page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 // Generate transmission ID
@@ -430,7 +613,6 @@ function isValidEmail(email) {
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
   initializeContactHangar();
-  addCharacterCounter();
   addFormAutoSave();
   addContactStatistics();
 

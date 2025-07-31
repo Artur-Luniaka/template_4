@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jet Escape - Ultimate Air Combat Escape</title>
+    <meta
+      name="description"
+      content="Experience the ultimate air combat escape game with Jet Escape. Break free from impossible situations, soar beyond limits with lightning speed, precision control, and maximum safety. Master the skies in this thrilling combat simulation."
+    />
+    <title>
+      Jet Escape - Ultimate Air Combat Escape | playzentertainment.com
+    </title>
+    <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/thrust-engine.css" />
     <link rel="stylesheet" href="css/escape-dynamics.css" />
   </head>
@@ -12,16 +19,36 @@
 
     <main class="flight-deck">
       <!-- Hero Section -->
-      <section class="afterburner-zone">
-        <div class="thrust-container">
-          <h1 class="mission-title">Jet Escape</h1>
-          <p class="escape-slogan">
+      <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">Jet Escape</h1>
+          <p class="hero-subtitle">
             Break free from the impossible. Soar beyond limits.
           </p>
-          <button class="ignite-button" id="playButton">Launch Mission</button>
-          <div class="jet-visual">
-            <div class="fighter-silhouette"></div>
-            <div class="thrust-trail"></div>
+          <div class="hero-features">
+            <div class="feature-card">
+              <div class="feature-icon">🚀</div>
+              <h3 class="feature-title">Lightning Speed</h3>
+              <p class="feature-description">
+                Experience unmatched velocity with cutting-edge propulsion
+                technology
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3 class="feature-title">Precision Control</h3>
+              <p class="feature-description">
+                Master the skies with advanced flight control systems
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3 class="feature-title">Maximum Safety</h3>
+              <p class="feature-description">
+                Built with military-grade materials and safety protocols
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -53,8 +80,31 @@
       <!-- Sky Zones -->
       <section class="airspace-sector" id="skyZones">
         <div class="mission-container">
-          <h2 class="section-title">Combat Zones</h2>
-          <div class="zones-grid" id="zonesGrid"></div>
+          <h2 class="section-title">Sky Zones</h2>
+          <div class="combat-zones-content">
+            <div class="combat-zones-text">
+              <h3 class="combat-zones-subtitle">Master the Battlefield</h3>
+              <p class="combat-zones-description">
+                Navigate through the most challenging combat environments where
+                every decision matters. From urban canyons to open skies, each
+                zone presents unique tactical challenges that will test your
+                piloting skills and strategic thinking.
+              </p>
+              <p class="combat-zones-description">
+                Experience dynamic weather conditions, varying altitudes, and
+                unpredictable enemy movements. Your ability to adapt and
+                overcome these challenges will determine your success in the
+                ultimate air combat escape mission.
+              </p>
+            </div>
+            <div class="combat-zones-image">
+              <img
+                src="img/jetpack-section.jpg"
+                alt="Combat Zones"
+                class="zones-hero-image"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -72,5 +122,21 @@
     <script src="js/thrust-core.js"></script>
     <script src="js/escape-loader.js"></script>
     <script src="js/mission-control.js"></script>
+    <script src="js/cookie-consent.js"></script>
+
+    <!-- Cookie Consent Bar -->
+    <div id="cookieConsent" class="cookie-consent">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h3>Mission Control Notice</h3>
+          <p>
+            We use cookies to enhance your flight experience and analyze mission
+            performance. By continuing to use this site, you consent to our use
+            of cookies for operational purposes.
+          </p>
+        </div>
+        <button id="acceptCookies" class="cookie-accept-btn">Accept</button>
+      </div>
+    </div>
   </body>
 </html>

@@ -105,15 +105,32 @@ function renderFeaturesGrid(containerId, features) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  const getFeatureIcon = (type) => {
+    const icons = {
+      Combat: "⚔️",
+      Gameplay: "🎮",
+      Mission: "🎯",
+      Environment: "🌪️",
+      AI: "🤖",
+      Progression: "📈",
+    };
+    return icons[type] || "🚀";
+  };
+
   container.innerHTML = features
     .map(
       (feature) => `
         <div class="feature-card">
-            <h3 class="card-title">${feature.title}</h3>
+            <div class="feature-header">
+                <div class="feature-icon-large">${getFeatureIcon(
+                  feature.type
+                )}</div>
+                <h3 class="card-title">${feature.title}</h3>
+            </div>
             <div class="card-content">${feature.description}</div>
             <div class="card-meta">
                 <span class="feature-type">${feature.type}</span>
-                <span class="feature-rating">Rating: ${feature.rating}/5</span>
+                <span class="feature-rating">⭐ ${feature.rating}/5</span>
             </div>
         </div>
     `
@@ -126,15 +143,29 @@ function renderPilotVoices(containerId, voices) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  // Pilot background images array
+  const pilotBackgrounds = [
+    "linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('../img/jetpack-hero.jpg')",
+    "linear-gradient(135deg, rgba(220, 53, 69, 0.8), rgba(173, 42, 54, 0.8)), url('../img/jetpack-hero.jpg')",
+    "linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(28, 117, 48, 0.8)), url('../img/jetpack-hero.jpg')",
+    "linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(198, 149, 5, 0.8)), url('../img/jetpack-hero.jpg')",
+  ];
+
   container.innerHTML = voices
     .map(
-      (voice) => `
-        <div class="voice-card">
-            <h3 class="card-title">${voice.pilotName}</h3>
-            <div class="card-content">"${voice.comment}"</div>
-            <div class="card-meta">
-                <span class="pilot-rank">${voice.rank}</span>
-                <span class="mission-count">Missions: ${voice.missionsCompleted}</span>
+      (voice, index) => `
+        <div class="voice-card" style="background: ${
+          pilotBackgrounds[index % pilotBackgrounds.length]
+        }; background-size: cover; background-position: center;">
+            <div class="voice-card-overlay">
+                <h3 class="card-title">${voice.pilotName}</h3>
+                <div class="card-content">"${voice.comment}"</div>
+                <div class="card-meta">
+                    <span class="pilot-rank">${voice.rank}</span>
+                    <span class="mission-count">Missions: ${
+                      voice.missionsCompleted
+                    }</span>
+                </div>
             </div>
         </div>
     `
@@ -168,15 +199,47 @@ function renderUpgrades(containerId, upgrades) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  // Upgrade background images array - using the same image as Sky Zones section
+  const upgradeBackgrounds = [
+    "linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(220, 53, 69, 0.8), rgba(173, 42, 54, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(28, 117, 48, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(255, 193, 7, 0.8), rgba(198, 149, 5, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(111, 66, 193, 0.8), rgba(88, 53, 154, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(253, 126, 20, 0.8), rgba(217, 108, 18, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(16, 185, 129, 0.8), rgba(14, 159, 110, 0.8)), url('../img/jetpack-section.jpg')",
+    "linear-gradient(135deg, rgba(239, 68, 68, 0.8), rgba(220, 38, 38, 0.8)), url('../img/jetpack-section.jpg')",
+  ];
+
+  // Get upgrade type icons
+  const getUpgradeIcon = (type) => {
+    const icons = {
+      Electronics: "⚡",
+      Defense: "🛡️",
+      Performance: "🚀",
+      Weapons: "🎯",
+    };
+    return icons[type] || "🔧";
+  };
+
   container.innerHTML = upgrades
     .map(
-      (upgrade) => `
-        <div class="upgrade-card">
-            <h3 class="card-title">${upgrade.name}</h3>
-            <div class="card-content">${upgrade.description}</div>
-            <div class="card-meta">
-                <span class="upgrade-cost">Cost: ${upgrade.cost}</span>
-                <span class="upgrade-type">${upgrade.type}</span>
+      (upgrade, index) => `
+        <div class="upgrade-card" style="background: ${
+          upgradeBackgrounds[index % upgradeBackgrounds.length]
+        }; background-size: cover; background-position: center;">
+            <div class="upgrade-card-overlay">
+                <div class="upgrade-header">
+                    <div class="upgrade-icon">${getUpgradeIcon(
+                      upgrade.type
+                    )}</div>
+                    <h3 class="card-title">${upgrade.name}</h3>
+                </div>
+                <div class="card-content">${upgrade.description}</div>
+                <div class="card-meta">
+                    <span class="upgrade-cost">Cost: ${upgrade.cost}</span>
+                    <span class="upgrade-type">${upgrade.type}</span>
+                </div>
             </div>
         </div>
     `
@@ -193,11 +256,14 @@ function renderSystemLogs(containerId, logs) {
     .map(
       (log) => `
         <div class="log-card">
-            <h3 class="card-title">${log.title}</h3>
-            <div class="card-content">${log.content}</div>
-            <div class="card-meta">
-                <span class="log-date">${log.date}</span>
-                <span class="log-version">v${log.version}</span>
+            <div class="log-card-background"></div>
+            <div class="log-card-overlay">
+                <h3 class="card-title">${log.title}</h3>
+                <div class="card-content">${log.content}</div>
+                <div class="card-meta">
+                    <span class="log-date">${log.date}</span>
+                    <span class="log-version">v${log.version}</span>
+                </div>
             </div>
         </div>
     `
@@ -214,11 +280,14 @@ function renderPilotDiaries(containerId, diaries) {
     .map(
       (diary) => `
         <div class="diary-card">
-            <h3 class="card-title">${diary.title}</h3>
-            <div class="card-content">${diary.story}</div>
-            <div class="card-meta">
-                <span class="diary-author">By ${diary.author}</span>
-                <span class="diary-date">${diary.date}</span>
+            <div class="diary-card-background"></div>
+            <div class="diary-card-overlay">
+                <h3 class="card-title">${diary.title}</h3>
+                <div class="card-content">${diary.story}</div>
+                <div class="card-meta">
+                    <span class="diary-author">By ${diary.author}</span>
+                    <span class="diary-date">${diary.date}</span>
+                </div>
             </div>
         </div>
     `
@@ -253,17 +322,27 @@ function renderBriefingContent(containerId, briefingData) {
   if (!container) return;
 
   container.innerHTML = `
-        <div class="briefing-section">
-            <h3>Mission Objectives</h3>
-            <p>${briefingData.objectives}</p>
-        </div>
-        <div class="briefing-section">
-            <h3>Controls</h3>
-            <p>${briefingData.controls}</p>
-        </div>
-        <div class="briefing-section">
-            <h3>Strategy</h3>
-            <p>${briefingData.strategy}</p>
+        <div class="briefing-card">
+            <div class="briefing-content">
+                <div class="briefing-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Mission Objectives</h3>
+                    </div>
+                    <p class="section-text">${briefingData.objectives}</p>
+                </div>
+                <div class="briefing-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Controls</h3>
+                    </div>
+                    <p class="section-text">${briefingData.controls}</p>
+                </div>
+                <div class="briefing-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Strategy</h3>
+                    </div>
+                    <p class="section-text">${briefingData.strategy}</p>
+                </div>
+            </div>
         </div>
     `;
 }
@@ -436,9 +515,9 @@ function getDefaultPilotDiaries() {
 
 function getDefaultContactInfo() {
   return {
-    email: "contact@jetescape.com",
-    phone: "+44 123 456 789",
-    location: "London, UK",
+            email: "contact@playzentertainment.com",
+        phone: "+61 3 9123 8801",
+        location: "10 Smith Street, Fitzroy VIC 3065, Australia",
   };
 }
 
@@ -461,16 +540,14 @@ function initializeContentLoading() {
 
 // Load homepage content
 async function loadHomepageContent() {
-  const [missionData, pilotVoices, skyZones, upgrades] = await Promise.all([
+  const [missionData, pilotVoices, upgrades] = await Promise.all([
     loadMissionData(),
     loadPilotCommunications(),
-    loadAirspaceZones(),
     loadHangarUpgrades(),
   ]);
 
   renderFeaturesGrid("featuresGrid", missionData.features);
   renderPilotVoices("voicesGrid", pilotVoices);
-  renderSkyZones("zonesGrid", skyZones);
   renderUpgrades("upgradesGrid", upgrades);
   renderBriefingContent("briefingContent", missionData.briefing);
 }

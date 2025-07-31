@@ -12,11 +12,39 @@
 
   /* Combat and Energy Colors */
   --afterburner-orange: #ff6b35;
+  --afterburner-orange-light: #ff8c42;
   --thrust-blue: #3182ce;
   --radar-green: #38a169;
   --warning-red: #e53e3e;
   --stealth-gray: #2d3748;
   --golden-wing: #d69e2e;
+
+  /* RGBA Colors and Shadows */
+  --shadow-black-light: rgba(0, 0, 0, 0.1);
+  --shadow-black-medium: rgba(0, 0, 0, 0.15);
+  --shadow-black-dark: rgba(0, 0, 0, 0.2);
+  --shadow-black-heavy: rgba(0, 0, 0, 0.3);
+  --shadow-black-very-heavy: rgba(0, 0, 0, 0.4);
+  --shadow-black-extreme: rgba(0, 0, 0, 0.5);
+  --shadow-black-max: rgba(0, 0, 0, 0.6);
+  --shadow-black-ultra: rgba(0, 0, 0, 0.7);
+  --shadow-black-supreme: rgba(0, 0, 0, 0.8);
+
+  --white-transparent-light: rgba(255, 255, 255, 0.1);
+  --white-transparent-medium: rgba(255, 255, 255, 0.2);
+  --white-transparent-heavy: rgba(255, 255, 255, 0.3);
+  --white-transparent-very-heavy: rgba(255, 255, 255, 0.4);
+  --white-transparent-extreme: rgba(255, 255, 255, 0.5);
+
+  --sky-thrust-transparent-light: rgba(10, 14, 26, 0.7);
+  --sky-thrust-transparent-medium: rgba(10, 14, 26, 0.8);
+  --sky-thrust-transparent-heavy: rgba(10, 14, 26, 0.85);
+  --sky-thrust-transparent-very-heavy: rgba(10, 14, 26, 0.95);
+  --sky-thrust-transparent-extreme: rgba(10, 14, 26, 0.98);
+
+  --afterburner-orange-transparent: rgba(255, 107, 53, 0.2);
+  --afterburner-orange-shadow: rgba(255, 107, 53, 0.3);
+  --thrust-blue-transparent: rgba(49, 130, 206, 0.1);
 
   /* Typography */
   --font-family-primary: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -27,8 +55,8 @@
   --flight-margin: 2rem;
   --hangar-gap: 1.5rem;
   --cockpit-radius: 8px;
-  --thrust-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --afterburner-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --thrust-shadow: 0 4px 6px var(--shadow-black-light);
+  --afterburner-shadow: 0 10px 25px var(--shadow-black-medium);
 
   /* Transitions */
   --thrust-transition: all 0.3s ease;
@@ -81,7 +109,7 @@ body {
   background-clip: text;
   text-align: center;
   margin-bottom: 1rem;
-  text-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+  text-shadow: 0 0 30px var(--afterburner-orange-shadow);
 }
 
 .page-title {
@@ -90,31 +118,6 @@ body {
   color: var(--pure-sky);
   text-align: center;
   margin-bottom: 0.5rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--sky-glow);
-  margin-bottom: var(--flight-margin);
-  text-align: center;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--afterburner-orange),
-    var(--thrust-blue)
-  );
-  border-radius: 2px;
 }
 
 .escape-slogan {
@@ -164,7 +167,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
+    var(--white-transparent-medium),
     transparent
   );
   transition: var(--escape-transition);
@@ -226,11 +229,11 @@ body {
 .form-textarea:focus {
   outline: none;
   border-color: var(--thrust-blue);
-  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  box-shadow: 0 0 0 3px var(--thrust-blue-transparent);
 }
 
 .form-textarea {
-  resize: vertical;
+  resize: none;
   min-height: 120px;
 }
 
@@ -286,10 +289,6 @@ a:hover {
     font-size: 2rem;
   }
 
-  .section-title {
-    font-size: 1.5rem;
-  }
-
   .escape-slogan {
     font-size: 1.1rem;
   }
@@ -306,9 +305,5 @@ a:hover {
 
   .page-title {
     font-size: 1.75rem;
-  }
-
-  .section-title {
-    font-size: 1.25rem;
   }
 }
