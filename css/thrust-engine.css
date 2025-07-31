@@ -75,6 +75,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-primary);
   background: linear-gradient(
